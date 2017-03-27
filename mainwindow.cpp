@@ -3,7 +3,7 @@
 #include "iostream"
 #include "string"
 #include "map"
-#inclusw "vector"
+#include "vector"
 #include "utility"
 
 struct ThemenGebiet
@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent):
     Themengebiet[1].Antworten.push_back(std::make_pair("3",false));
     Themengebiet[1].Antworten.push_back(std::make_pair("4",false));
 
-    this->FillButtons()Themengebiet[0];
+
 }
 
 
@@ -54,10 +54,12 @@ void MainWindow::FillButtons(ThemenGebiet tgb)
     ui->BoolAntwort3=tgb.Antworten[0].second;
     ui->BoolAntwort4=tgb.Antworten[0].second;
 
-
-
-
 }
+
+
+
+
+
 
 MainWindow::~MainWindow()
 {
@@ -70,19 +72,20 @@ void MainWindow::on_pushButton_clicked()
     ui->pushButton_3->setVisible(true);
     ui->pushButton_4->setVisible(true);
     ui->pushButton_5->setVisible(true);
+    //this->FillButtons(Themengebiet[0]);
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
     this->close();
 }
-
+/*
 void MainWindow::on_pushButton_2_clicked()
 {
     if(BoolAntwort1)
     {
         //messagbox anzeigen
-        this->FillButtons(/*Nächste Frage*/);
+        this->FillButtons(Nächste Frage);
     }
 }
 
@@ -91,7 +94,7 @@ void MainWindow::on_pushButton_3_clicked()
     if(BoolAntwort2)
     {
         //messagbox anzeigen
-        this->FillButtons(/*Nächste Frage*/);
+        this->FillButtons(Nächste Frage);
     }
 }
 
@@ -100,7 +103,7 @@ void MainWindow::on_pushButton_4_clicked()
     if(BoolAntwort3)
     {
         //messagbox anzeigen
-        this->FillButtons(/*Nächste Frage*/);
+        this->FillButtons(Nächste Frage);
     }
 }
 
@@ -109,6 +112,7 @@ void MainWindow::on_pushButton_5_clicked()
     if(BoolAntwort4)
     {
         //messagbox anzeigen
-        this->FillButtons(/*Nächste Frage*/);
+        this->FillButtons(Nächste Frage);
     }
 }
+*/
