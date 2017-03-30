@@ -24,12 +24,12 @@ MainWindow::MainWindow(QWidget *parent):
     ui->pushButton_5->setVisible(false);
     ui->pushButton->setText("Herzlich Willkommen zum QuizGame.""\n""Hier drücken um zu starten.");
 
-    ThemenGebiet Themengebiet[2];
+    ThemenGebiet Themengebiet[15];
     Themengebiet[0].Frage = "Beispielfrage";
-    Themengebiet[0].Antworten.push_back(std::make_pair("1",true));
+    Themengebiet[0].Antworten.push_back(std::make_pair("0",true));
+    Themengebiet[0].Antworten.push_back(std::make_pair("1",false));
     Themengebiet[0].Antworten.push_back(std::make_pair("2",false));
     Themengebiet[0].Antworten.push_back(std::make_pair("3",false));
-    Themengebiet[0].Antworten.push_back(std::make_pair("4",false));
 
     Themengebiet[1].Frage = "Beispielfrage";
     Themengebiet[1].Antworten.push_back(std::make_pair("1",true));
@@ -86,7 +86,7 @@ void MainWindow::on_pushButton_2_clicked()
     if(BoolAntwort1)
     {
         //messagbox anzeigen
-        //this->FillButtons(Nächste Frage);
+        this->FillButtons(this->Themengebiet[0]);
     }
 }
 
