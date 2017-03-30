@@ -18,7 +18,6 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    //struct ThemenGebiet;
      struct ThemenGebiet
     {
         QString Frage;
@@ -45,6 +44,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    ThemenGebiet Themengebiet[];
 };
 
 #endif // MAINWINDOW_H
