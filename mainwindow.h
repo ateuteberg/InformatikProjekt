@@ -18,14 +18,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    struct ThemenGebiet;
-    struct Themengebiet;
-    bool BoolAntwort1;
-    bool BoolAntwort2;
-    bool BoolAntwort3;
-    bool BoolAntwort4;
+    //struct ThemenGebiet;
+     struct ThemenGebiet
+    {
+        QString Frage;
+        std::vector<std::pair<QString, bool> > Antworten;
+    };
 
     void FillButtons(ThemenGebiet tgb);
+
 
 
 
@@ -33,8 +34,6 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_6_clicked();
-
-    void on_MainWindow_iconSizeChanged(const QSize &iconSize);
 
     void on_pushButton_2_clicked();
 
