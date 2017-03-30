@@ -6,11 +6,12 @@
 #include "vector"
 #include "utility"
 
-struct ThemenGebiet
-{
-    std::string Frage;
-    std::vector<std::pair<std::string, bool> > Antworten;
-};
+
+
+bool BoolAntwort1;
+bool BoolAntwort2;
+bool BoolAntwort3;
+bool BoolAntwort4;
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
@@ -49,10 +50,10 @@ void MainWindow::FillButtons(ThemenGebiet tgb)
     ui->pushButton_4->setText(tgb.Antworten[2].first);
     ui->pushButton_5->setText(tgb.Antworten[3].first);
 
-    ui->BoolAntwort1=tgb.Antworten[0].second;
-    ui->BoolAntwort2=tgb.Antworten[0].second;
-    ui->BoolAntwort3=tgb.Antworten[0].second;
-    ui->BoolAntwort4=tgb.Antworten[0].second;
+    BoolAntwort1=tgb.Antworten[0].second;
+    BoolAntwort2=tgb.Antworten[0].second;
+    BoolAntwort3=tgb.Antworten[0].second;
+    BoolAntwort4=tgb.Antworten[0].second;
 
 }
 
@@ -79,13 +80,13 @@ void MainWindow::on_pushButton_6_clicked()
 {
     this->close();
 }
-/*
+
 void MainWindow::on_pushButton_2_clicked()
 {
     if(BoolAntwort1)
     {
         //messagbox anzeigen
-        this->FillButtons(Nächste Frage);
+        //this->FillButtons(Nächste Frage);
     }
 }
 
@@ -94,7 +95,7 @@ void MainWindow::on_pushButton_3_clicked()
     if(BoolAntwort2)
     {
         //messagbox anzeigen
-        this->FillButtons(Nächste Frage);
+        //this->FillButtons(Nächste Frage);
     }
 }
 
@@ -103,7 +104,7 @@ void MainWindow::on_pushButton_4_clicked()
     if(BoolAntwort3)
     {
         //messagbox anzeigen
-        this->FillButtons(Nächste Frage);
+        //this->FillButtons(Nächste Frage);
     }
 }
 
@@ -112,7 +113,7 @@ void MainWindow::on_pushButton_5_clicked()
     if(BoolAntwort4)
     {
         //messagbox anzeigen
-        this->FillButtons(Nächste Frage);
+        //this->FillButtons(Nächste Frage);
     }
 }
-*/
+
